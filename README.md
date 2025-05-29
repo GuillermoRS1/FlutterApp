@@ -32,18 +32,18 @@ A simple Flutter application demonstrating Create, Read, Update and Delete (CRUD
    flutter pub get
 
 3. **Configure JDK 17 for Android builds**
-   - Download & install a Java 17 JDK (e.g. Adoptium/Eclipse Temurin).
-   - Point Flutter to it:
+- Download & install a Java 17 JDK (e.g. Adoptium/Eclipse Temurin).
+- Point Flutter to it:
    ```bash
    flutter config --jdk-dir="C:\Program Files\Java\jdk-17"
 
-   - Verify:
-      ```bash
-      flutter doctor -v
+- Verify:
+  ```bash
+  flutter doctor -v
 
-   You should see:
-   • Java binary at: C:\Program Files\Java\jdk-17\bin\java
-   • Java version: 17.x
+You should see:
+• Java binary at: C:\Program Files\Java\jdk-17\bin\java
+• Java version: 17.x
 
 4. **Accept Android SDK licenses**
    ```bash
