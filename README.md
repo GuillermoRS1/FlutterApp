@@ -101,7 +101,7 @@ Drift/Moor with drift/web.dart (IndexedDB)
 - Confirm java -version in your terminal shows 17.x.
 - If it still picks Java 11, add to android/gradle.properties:
 
-´´´PROPERTIES
+´´´properties
 org.gradle.java.home=C:/Program Files/Java/jdk-17
 
 **Device not listed by `adb devices`**
@@ -109,14 +109,14 @@ org.gradle.java.home=C:/Program Files/Java/jdk-17
 2. Install OEM USB drivers (Samsung, Xiaomi, etc.).
 3. Restart ADB server:
 
-´´´BASH
+´´´bash
 adb kill-server
 adb start-server
 adb devices
 
 **Build or dependency issues**
 
-´´´BASH
+´´´bash
 flutter clean
 flutter pub get
 flutter run
