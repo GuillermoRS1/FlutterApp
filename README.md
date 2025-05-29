@@ -34,69 +34,63 @@ A simple Flutter application demonstrating Create, Read, Update and Delete (CRUD
 3. **Configure JDK 17 for Android builds**
    - Download & install a Java 17 JDK (e.g. Adoptium/Eclipse Temurin).
    - Point Flutter to it:
+   ```bash
+   flutter config --jdk-dir="C:\Program Files\Java\jdk-17"
 
-```bash
-flutter config --jdk-dir="C:\Program Files\Java\jdk-17"
+   - Verify:
+   ```bash
+   flutter doctor -v
 
-- Verify:
-
-```bash
-flutter doctor -v
-
-You should see:
-• Java binary at: C:\Program Files\Java\jdk-17\bin\java
-• Java version: 17.x
+   You should see:
+   • Java binary at: C:\Program Files\Java\jdk-17\bin\java
+   • Java version: 17.x
 
 4. **Accept Android SDK licenses**
-
-```bash
-flutter doctor --android-licenses
+   ```bash
+   flutter doctor --android-licenses
 
 5. **Start an emulator or connect a device**
-- Emulator (Android Studio or CLI):
+   - Emulator (Android Studio or CLI):
 
-```bash
-flutter emulators --create --name myEmu
-flutter emulators --launch myEmu
+   ```bash
+   flutter emulators --create --name myEmu
+   flutter emulators --launch myEmu
 
-- Physical device: enable USB debugging & set default USB configuration to “File Transfer (MTP)”.
+   - Physical device: enable USB debugging & set default USB configuration to “File Transfer (MTP)”.
 
 6. **Run the app**
-
-```bash
-flutter run
+   ```bash
+   flutter run
 
 ## Flutter Web (Optional)
 To run in a browser, we use sqflite_common_ffi_web for SQLite emulation or switch to another web-friendly storage.
 
 1. Add to pubspec.yaml:
-
-```yaml
-dependencies:
-  sqflite_common_ffi: ^2.2.1
-  sqflite_common_ffi_web: ^2.2.1
+   ```yaml
+   dependencies:
+     sqflite_common_ffi: ^2.2.1
+     sqflite_common_ffi_web: ^2.2.1
   
 2. In main.dart:
 
-```dart
-import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:flutter/widgets.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart'
-  if (dart.library.html) 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
+   ```dart
+   import 'package:flutter/foundation.dart' show kIsWeb;
+   import 'package:flutter/widgets.dart';
+   import 'package:sqflite_common_ffi/sqflite_ffi.dart'
+     if (dart.library.html) 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  // Initializes the correct implementation for desktop or web
-  sqfliteFfiInit();
-  runApp(MyApp());
-}
+   void main() async {
+     WidgetsFlutterBinding.ensureInitialized();
+     // Initializes the correct implementation for desktop or web
+     sqfliteFfiInit();
+     runApp(MyApp());
+   }
 
 3. Launch in Chrome:
+   ```bash
+   flutter run -d chrome
 
-```bash
-flutter run -d chrome
-
-** Alternative Web Storage **
+**Alternative Web Storage**
 Hive + hive_flutter (uses IndexedDB on web)
 sembast + sembast_web
 Drift/Moor with drift/web.dart (IndexedDB)
