@@ -23,7 +23,7 @@ A simple Flutter application demonstrating CRUD operations with SQLite database 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/flutter_crud_app.git
+   git clone https://github.com/GuillermoRS1/FlutterApp.git
    cd flutter_crud_app
    ```
 
