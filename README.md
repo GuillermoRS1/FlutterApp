@@ -38,8 +38,8 @@ A simple Flutter application demonstrating Create, Read, Update and Delete (CRUD
    flutter config --jdk-dir="C:\Program Files\Java\jdk-17"
 
    - Verify:
-   ```bash
-   flutter doctor -v
+      ```bash
+      flutter doctor -v
 
    You should see:
    • Java binary at: C:\Program Files\Java\jdk-17\bin\java
