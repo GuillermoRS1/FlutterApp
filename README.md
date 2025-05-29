@@ -101,25 +101,24 @@ Drift/Moor with drift/web.dart (IndexedDB)
 - Confirm java -version in your terminal shows 17.x.
 - If it still picks Java 11, add to android/gradle.properties:
 
-```properties
-org.gradle.java.home=C:/Program Files/Java/jdk-17
+   ```properties
+   org.gradle.java.home=C:/Program Files/Java/jdk-17
 
 **Device not listed by `adb devices`**
 1. Enable USB debugging and set USB mode to File Transfer (MTP).
 2. Install OEM USB drivers (Samsung, Xiaomi, etc.).
 3. Restart ADB server:
 
-```bash
-adb kill-server
-adb start-server
-adb devices
+   ```bash
+   adb kill-server
+   adb start-server
+   adb devices
 
 **Build or dependency issues**
-
-```bash
-flutter clean
-flutter pub get
-flutter run
+      ```bash
+      flutter clean
+      flutter pub get
+      flutter run
 
 **SQLite errors on Web**
 - Use the sqflite_common_ffi_web initialization above, or
