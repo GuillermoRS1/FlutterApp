@@ -35,12 +35,12 @@ class ItemCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF2F2E2E), // Title color
+                      color: Color(0xFF2F2E2E), 
                     ),
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.edit, color: Color(0xFF7B5BF2)), // Buttons color
+                  icon: const Icon(Icons.edit, color: Color(0xFF7B5BF2)), 
                   onPressed: onEdit,
                   tooltip: 'Edit',
                 ),
@@ -56,7 +56,7 @@ class ItemCard extends StatelessWidget {
               item.description,
               style: const TextStyle(
                 fontSize: 14,
-                color: Colors.black, // Cambiado a negro
+                color: Colors.black,
               ),
             ),
           ],

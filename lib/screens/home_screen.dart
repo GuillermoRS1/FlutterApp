@@ -5,7 +5,7 @@ import '../widgets/item_card.dart';
 import 'add_edit_screen.dart';
 import '../models/item.dart';
 
-/// Home screen displaying a list of items.
+// Home screen displaying a list of items.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -33,8 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         centerTitle: true,
         elevation: 4,
-        backgroundColor: const Color(0xFF09184D), // Menu color
-        iconTheme: const IconThemeData(color: Colors.white), // Cambiado a blanco
+        backgroundColor: const Color(0xFF09184D),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Consumer<ItemProvider>(
         builder: (context, itemProvider, child) {
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () => _navigateToAddEditScreen(context),
         child: const Icon(Icons.add),
-        backgroundColor: const Color(0xFF7B5BF2), // Buttons color
+        backgroundColor: const Color(0xFF7B5BF2),
       ),
     );
   }

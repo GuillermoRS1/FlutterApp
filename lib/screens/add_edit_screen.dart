@@ -39,10 +39,10 @@ class _AddEditScreenState extends State<AddEditScreen> {
       appBar: AppBar(
         title: Text(
           widget.item == null ? 'Add Item' : 'Edit Item',
-          style: const TextStyle(color: Colors.white), // Title color
+          style: const TextStyle(color: Colors.white),
         ),
-        backgroundColor: const Color(0xFF09184D), // Menu color
-        iconTheme: const IconThemeData(color: Colors.white), // Back arrow color
+        backgroundColor: const Color(0xFF09184D),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -53,7 +53,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
               TextFormField(
                 controller: _nameController,
                 decoration: const InputDecoration(labelText: 'Name'),
-                style: const TextStyle(color: Colors.black), // Input text color
+                style: const TextStyle(color: Colors.black),
                 validator: (value) => value!.isEmpty ? 'Please enter a name' : null,
               ),
               const SizedBox(height: 16),
@@ -61,7 +61,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
                 controller: _descriptionController,
                 decoration: const InputDecoration(labelText: 'Description'),
                 maxLines: 5,
-                style: const TextStyle(color: Colors.black), // Input text color
+                style: const TextStyle(color: Colors.black),
                 validator: (value) => value!.isEmpty ? 'Please enter a description' : null,
               ),
               const SizedBox(height: 20),
